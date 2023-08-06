@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <style>
+    
+body{
+
+text-align: center;
+background-image: url(https://wallpapers.com/images/featured/colorful-tlzydzdb2ogq2b70.jpg);
+height: 100vh;
+background-size: cover ;
+overflow: hidden;
+font-family: sans-serif;
+}
+
+.box{
+margin: auto;
+margin-top: 1rem;
+height: 300px;
+width: 600px;
+overflow: hidden;
+border-radius: 8px;
+border: 1px solid black;
+
+}
+
+h4{     text-transform: uppercase;   
+     text-decoration: underline;
+}
+h3{
+animation: p 3s  infinite;
+}
+@keyframes p{
+0%{
+   
+   color:aqua;
+}
+10%{
+   color:blue;
+}
+20%{
+   color:green;
+}
+30%{
+    color:red;
+}
+40%{
+    color:yellow;
+}
+50%{
+    color:black;
+}
+60%{
+    color:gray;
+}
+70%{
+    color:magenta;
+}
+80%{
+    color:navy;
+}
+90%{
+    color:lightcoral;
+}
+100%{
+    color:skyblue;
+}
+}
+
+button{
+font-size: 1.5rem;
+border-radius: 20px;
+box-shadow: 2px 4px 8px black;
+}
+
+button:hover{
+animation: p 3s  infinite;
+}
+button:active{
+box-shadow: 2px 4px 8px palegoldenrod;
+}
+.me{
+height: 100px;
+width: 100px;
+border-radius: 50%;
+margin-left: 70rem;
+margin-top: 4rem;
+}
+.icon{
+font-size: 18px;
+color: aliceblue;
+}
+p{  margin-left: 72rem;
+font-family: sans-serif;
+animation: p 3s  infinite;
+text-decoration: underline;
+}
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h3>Generate a random Color</h3>
+    <button>Generate</button>
+    <div class="box">
+       <h4>This is your new color :</h4>
+    </div>
+       
+  
+
+        <img src="https://media.licdn.com/dms/image/D5603AQEghA5wGkYR8A/profile-displayphoto-shrink_800_800/0/1689912100042?e=1697068800&v=beta&t=2MLYo5vdNH8oe_6T33t1qTvDtRtDfZf9TX1Qp75Wy1g" alt="" class="me a">
+        <br>
+      
+        <p><a href="https://www.linkedin.com/in/kamran-hossain-topu-774b78257/"> <i class="fa-brands fa-linkedin icon"></i></a> &nbsp;Kamran Hossain Topu</p>
+    <script>
+         let btn = document.querySelector("button");
+
+btn.addEventListener("click", function () {
+    console.log("generate random color");
+    let h3 = document.querySelector("h3");
+    let randomColor = getRandomColor();
+    h3.innerText = randomColor;
+
+    console.log("Color updated");
+
+    let div = document.querySelector("div");
+    div.style.backgroundColor=randomColor;
+
+    // btn.style.backgroundColor=randomColor;
+});
+
+function  getRandomColor() {
+    let red = Math.floor(Math.random()*255);
+    let green = Math.floor(Math.random()*255);
+    let blue = Math.floor(Math.random()*255);
+
+    let color = `RGB(${red},${green},${red})`;
+    return color;
+}
+
+    </script>
+</body>
+</html>
